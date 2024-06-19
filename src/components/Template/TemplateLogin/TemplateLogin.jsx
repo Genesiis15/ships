@@ -1,6 +1,6 @@
 import React from 'react'
-import AppText from '../../../atoms/AppText/AppText'
-import { Login } from '../../../organims/Login/Login'
+import AppText from '../../../components/atoms/AppText/AppText'
+import { Login } from '../../../components/organims/Login/Login'
 import {View} from 'react-native';
 
 

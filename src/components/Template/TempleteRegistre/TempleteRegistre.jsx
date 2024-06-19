@@ -1,7 +1,7 @@
 import React from 'react'
-import AppText from '../../../atoms/AppText/AppText'
+import AppText from '../../../components/atoms/AppText/AppText'
 import {View} from 'react-native';
-import { Registre } from '../../../organims/Registre/Registre';
+import { Registre } from '../../../components/organims/Registre/Registre';
 
 
 const TemplateRegistre = () =>{

@@ -2,11 +2,9 @@ import React from 'react'
 import {View,  StyleSheet, Image, Button, Alert, Text } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Test from '../components/Test'
-import AppText from '../atoms/AppText/AppText';
 import { LoginView } from '../views/LoginView/LoginView';
 import { RegistreView } from '../views/RegistreView/RegistreView';
-import AppNavbar from '../molecules/Navbar/AppNavbar';
+import AppNavbar from '../components/molecules/Navbar/AppNavbar';
 import TemplateDashboard from '../components/Template/TemplateDashboard/TemplateDashboard';
 import Layout from '../components/Layout';
 
@@ -42,8 +40,8 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="login">
         <Stack.Screen name="login" component={LoginView} options={{title:''}} />
-        <Stack.Screen name="dashboard" component={TemplateDashboard} options={{ headerTitle: () => null, // Oculta el título predeterminado
-              header: (props) => <Layout style={{paddingTop: 50, backgroundColor:'#f5f5f5'}}><AppNavbar {...props} /></Layout>, // Usa AppNavbar para el logo
+        <Stack.Screen name="dashboard" component={TemplateDashboard} options={{ headerTitle: () => null, 
+              header: (props) => <Layout style={{paddingTop: 50, backgroundColor:'#f5f5f5'}}><AppNavbar {...props} /></Layout>, 
              }}/>
         <Stack.Screen name="registre" component={RegistreView} options={{title: ''}} />
         <Stack.Screen name="Details" component={DetailsScreen} />

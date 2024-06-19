@@ -1,5 +1,5 @@
 import React from 'react'
-import ModalBottom from "../molecules/ModalBottom/ModalBottom";
+
 import { View } from 'react-native';
 const Layout = ({children}) =>{
     return (

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import logoImage from '../../../assets/logo.png';
+import logoImage from '../../../../assets/logo.png';
 
 const AppNavbar = ({navigation}) => {
   const [menuVisible, setMenuVisible] = useState(false);
