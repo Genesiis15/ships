@@ -4,12 +4,12 @@ import Main from '../../organims/Main/Main';
 import ListBeach from '../../organims/ListBeach/ListBeach';
 
 const TemplateDashboard = () => {
-  
+
 
   return (
     <View style={styles.container}>
       <Main />
-      <ListBeach/>
+      <ListBeach />
     </View>
   );
 };

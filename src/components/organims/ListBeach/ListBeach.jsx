@@ -8,12 +8,12 @@ import { loadBeaches } from '../../../services/beachesServices';
 
 
 const ListBeach = () => {
-  
+
   const [modalVisible, setModalVisible] = useState(false);
   const [beaches, setBeaches] = useState([])
 
-  useEffect(()=>{
-    loadBeaches().then(res=>{setBeaches(res)}).catch(error=>{console.log(error)})
+  useEffect(() => {
+    loadBeaches().then(res => { setBeaches(res) }).catch(error => { console.log(error) })
   }, [])
   return (
 
@@ -23,23 +23,21 @@ const ListBeach = () => {
       </View>
       {/* Estructura de la modal */}
       <ModalButton isVisible={modalVisible} setVisible={setModalVisible}>
-        <FlatList 
-        data={beaches} 
-        
-        renderItem={({item})=>
-          {
-            console.log(item)
-            return  <View style={{ marginBottom: 10,  paddingHorizontal: 10}}>
+        <FlatList
+          data={beaches}
 
-            <ItemBeach 
-            imagen={item.images[0].imageName} 
-            location={item.location} 
-            title={item.name} 
-            onPress={()=>{console.log('hola')}}/>
-          </View>
-          } 
-         }/>
-      
+          renderItem={({ item }) => {
+            return <View style={{ marginBottom: 10, paddingHorizontal: 10 }}>
+
+              <ItemBeach
+                imagen={item.images[0].imageName}
+                location={item.location}
+                title={item.name}
+                onPress={() => { }} />
+            </View>
+          }
+          } />
+
         <AppButton title="Cerrar" onPress={() => setModalVisible(!modalVisible)} />
       </ModalButton>
     </View>
@@ -57,10 +55,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white'
   },
 
-  
-    card:{
 
-    }
-  
+  card: {
+
+  }
+
 });
 export default ListBeach;
